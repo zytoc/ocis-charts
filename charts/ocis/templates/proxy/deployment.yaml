@@ -73,6 +73,14 @@ spec:
 
             - name: PROXY_OIDC_SKIP_USER_INFO
               value: {{ .Values.features.externalUserManagement.oidc.skipUserInfo | quote }}
+
+            - name: PROXY_OIDC_CLIENT_ID
+              value: {{ .Values.features.externalUserManagement.oidc.webClientID | quote }}
+            - name: PROXY_OIDC_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ocis-oidc-client-secret
+                  key: OIDC_CLIENT_SECRET
             {{- end }}
 
             - name: PROXY_TLS
