@@ -5,6 +5,7 @@
     "redis": {
       "type": "object",
       "description": "Configuration for the bundled Redis sub-chart. See https://github.com/bitnami/charts/tree/main/bitnami/redis#parameters"
+    },
     "autoscaling": {
       "additionalProperties": true,
       "description": "Autoscaling settings.",
