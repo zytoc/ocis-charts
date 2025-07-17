@@ -16,6 +16,7 @@ dependencies:
   - name: nats
     version: "^0.19.0" # Use the latest stable version or the one you need
     repository: "https://nats-io.github.io/k8s/helm/charts/"
+    enabled: true
 kubeVersion: "" # please see https://doc.owncloud.com/ocis/next/deployment/container/orchestration/orchestration.html#get-the-chart for compatible Kubernetes versions
 sources:
   - https://github.com/owncloud/ocis-charts
