@@ -12,6 +12,11 @@ type: application
 version: 0.7.0
 # renovate: datasource=docker depName=owncloud/ocis
 appVersion: 7.1.3
+dependencies:
+  - name: redis
+    version: "18.6.0"
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: redis.enabled
 kubeVersion: "" # please see https://doc.owncloud.com/ocis/next/deployment/container/orchestration/orchestration.html#get-the-chart for compatible Kubernetes versions
 sources:
   - https://github.com/owncloud/ocis-charts
